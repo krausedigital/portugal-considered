@@ -1,0 +1,174 @@
+
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="site-logo">
+          Portugal Considered
+        </a>
+
+        <nav aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/destinations/">Destinations</a>
+          <a href="/trip-planning/">Trip Planning</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">Portugal Considered</p>
+
+        <p>
+          Thoughtful guidance for a better Portugal vacation.
+        </p>
+
+        <p class="footer-links">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy-policy/">Privacy</a>
+          <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+        </p>
+
+        <p class="copyright">
+          &copy; {new Date().getFullYear()} Portugal Considered.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-ink: #24332e;
+    --color-green: #38574b;
+    --color-cream: #faf8f3;
+    --color-sand: #eae4d9;
+    --color-muted: #666e68;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+  }
+
+  a {
+    color: var(--color-green);
+  }
+
+  .site-header {
+    background: var(--color-cream);
+    border-bottom: 1px solid var(--color-sand);
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .site-logo {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-ink);
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .site-footer {
+    margin-top: 80px;
+    padding: 55px 28px;
+    background: var(--color-green);
+    color: white;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-brand {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .site-footer a {
+    color: white;
+  }
+
+  .copyright {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 700px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav {
+      gap: 12px 20px;
+    }
+
+    .site-logo {
+      font-size: 23px;
+    }
+  }
+</style>

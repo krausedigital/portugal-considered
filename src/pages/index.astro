@@ -1,55 +1,120 @@
 ---
+import Base from "../layouts/Base.astro";
+
 const title = "Portugal Considered";
 const description =
   "Practical, decision-driven travel guidance for planning a better Portugal vacation.";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
-  </head>
+<Base title={title} description={description}>
+  <section class="home-intro">
+    <div class="home-intro-inner">
+      <p class="eyebrow">Travel Portugal with intention</p>
 
-  <body>
-    <main>
       <h1>Portugal, considered.</h1>
 
-      <p>
+      <p class="intro">
         Practical guidance for deciding where to go, how long to stay,
         and what deserves a place in your Portugal vacation.
       </p>
+    </div>
+  </section>
 
-      <section>
-        <h2>Planning Your First Portugal Trip?</h2>
+  <section class="home-section">
+    <h2>Planning Your First Portugal Trip?</h2>
 
-        <p>
-          Start with the decisions that shape the trip: where to spend your
-          time, how long each destination deserves, and what is worth leaving
-          out.
-        </p>
-      </section>
+    <p>
+      Start with the decisions that shape the trip: where to spend your
+      time, how long each destination deserves, and what is worth leaving
+      out.
+    </p>
+  </section>
 
-      <section>
-        <h2>Explore Portugal</h2>
+  <section class="home-section">
+    <h2>Explore Portugal</h2>
 
-        <p>
-          Thoughtful destination guidance for building a Portugal trip around
-          the places and experiences that matter to you.
-        </p>
-      </section>
+    <p>
+      Thoughtful destination guidance for building a Portugal trip around
+      the places and experiences that matter to you.
+    </p>
+  </section>
 
-      <section>
-        <h2>Decisions Worth Making Before You Book</h2>
+  <section class="home-section">
+    <h2>Decisions Worth Making Before You Book</h2>
 
-        <p>
-          Some travel decisions become harder—or more expensive—to change once
-          the trip is underway. Portugal Considered helps you make those
-          decisions while you still have choices.
-        </p>
-      </section>
-    </main>
-  </body>
-</html>
+    <p>
+      Some travel decisions become harder—or more expensive—to change once
+      the trip is underway. Portugal Considered helps you make those
+      decisions while you still have choices.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .home-intro {
+    padding: 110px 28px 90px;
+    text-align: center;
+  }
+
+  .home-intro-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-green);
+  }
+
+  h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.05;
+    font-weight: 500;
+  }
+
+  .intro {
+    max-width: 680px;
+    margin: 28px auto 0;
+    font-size: 20px;
+    color: var(--color-muted);
+  }
+
+  .home-section {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 55px 28px;
+    border-top: 1px solid var(--color-sand);
+  }
+
+  .home-section h2 {
+    margin-top: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    font-weight: 500;
+  }
+
+  .home-section p {
+    font-size: 18px;
+  }
+
+  @media (max-width: 700px) {
+    .home-intro {
+      padding: 75px 22px 60px;
+    }
+
+    .intro {
+      font-size: 18px;
+    }
+
+    .home-section {
+      padding: 42px 22px;
+    }
+  }
+</style>

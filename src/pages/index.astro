@@ -7,6 +7,13 @@ const description =
 ---
 
 <Base title={title} description={description}>
+  <section class="hero-image">
+    <img
+      src="/images/portugal-considered-hero-douro.jpg"
+      alt="Douro River winding through terraced vineyards and a village in northern Portugal"
+    />
+  </section>
+
   <section class="home-intro">
     <div class="home-intro-inner">
       <p class="eyebrow">Travel Portugal with intention</p>
@@ -51,8 +58,23 @@ const description =
 </Base>
 
 <style>
+  .hero-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: var(--color-sand);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 52%;
+  }
+
   .home-intro {
-    padding: 110px 28px 90px;
+    padding: 80px 28px 85px;
     text-align: center;
   }
 
@@ -105,8 +127,16 @@ const description =
   }
 
   @media (max-width: 700px) {
+    .hero-image {
+      height: 330px;
+    }
+
+    .hero-image img {
+      object-position: center center;
+    }
+
     .home-intro {
-      padding: 75px 22px 60px;
+      padding: 60px 22px 65px;
     }
 
     .intro {

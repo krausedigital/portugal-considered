@@ -150,14 +150,52 @@ const description =
     </div>
   </section>
 
-  <section class="home-section">
-    <h2>Decisions Worth Making Before You Book</h2>
+  <section class="decisions-section">
+    <div class="decisions-inner">
+      <div class="decisions-intro">
+        <p class="eyebrow">Before you book</p>
 
-    <p>
-      Some travel decisions become harder—or more expensive—to change once
-      the trip is underway. Portugal Considered helps you make those
-      decisions while you still have choices.
-    </p>
+        <h2>Decisions Worth Making Before You Book</h2>
+
+        <p>
+          Some travel decisions become harder—or more expensive—to change once
+          the trip is underway. Portugal Considered helps you make those
+          decisions while you still have choices.
+        </p>
+      </div>
+
+      <div class="decisions-grid">
+        <article class="decision-item">
+          <h3>Day Trip or Overnight?</h3>
+
+          <p>
+            Some places are easy to visit in a day but more rewarding with
+            time to stay. Decide when an overnight is worth changing your
+            itinerary.
+          </p>
+        </article>
+
+        <article class="decision-item">
+          <h3>Train, Car, or Transfer?</h3>
+
+          <p>
+            The best way to get around Portugal depends on where you are
+            going and what you want to experience. Choose transportation
+            that fits the trip rather than complicates it.
+          </p>
+        </article>
+
+        <article class="decision-item">
+          <h3>Where Should You Base Yourself?</h3>
+
+          <p>
+            Changing hotels can open up a region—or simply add packing and
+            travel time. Decide when another base genuinely improves the
+            trip.
+          </p>
+        </article>
+      </div>
+    </div>
   </section>
 </Base>
 
@@ -226,7 +264,8 @@ const description =
   }
 
   .planning-intro h2,
-  .explore-intro h2 {
+  .explore-intro h2,
+  .decisions-intro h2 {
     margin-top: 0;
     margin-bottom: 18px;
     font-family: Georgia, serif;
@@ -236,13 +275,15 @@ const description =
   }
 
   .planning-intro p,
-  .explore-intro p {
+  .explore-intro p,
+  .decisions-intro p {
     margin-bottom: 0;
     font-size: 18px;
   }
 
   .planning-grid,
-  .explore-grid {
+  .explore-grid,
+  .decisions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
@@ -258,7 +299,8 @@ const description =
   }
 
   .planning-card h3,
-  .explore-card h3 {
+  .explore-card h3,
+  .decision-item h3 {
     margin: 0 0 12px;
     font-family: Georgia, serif;
     font-size: 26px;
@@ -267,7 +309,8 @@ const description =
   }
 
   .planning-card p,
-  .explore-card p {
+  .explore-card p,
+  .decision-item p {
     margin: 0 0 18px;
     font-size: 16px;
   }
@@ -284,28 +327,40 @@ const description =
     text-decoration: underline;
   }
 
-  .home-section {
-    max-width: 820px;
+  .decisions-section {
+    margin-top: 10px;
+    padding: 75px 28px 80px;
+    background: var(--color-sand);
+  }
+
+  .decisions-inner {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 55px 28px;
-    border-top: 1px solid var(--color-sand);
   }
 
-  .home-section h2 {
+  .decisions-intro {
+    max-width: 820px;
+    margin-bottom: 45px;
+  }
+
+  .decisions-intro .eyebrow {
     margin-top: 0;
-    font-family: Georgia, serif;
-    font-size: clamp(30px, 4vw, 42px);
-    line-height: 1.15;
-    font-weight: 500;
+    margin-bottom: 14px;
   }
 
-  .home-section p {
-    font-size: 18px;
+  .decision-item {
+    padding-top: 24px;
+    border-top: 2px solid var(--color-green);
+  }
+
+  .decision-item p {
+    color: var(--color-muted);
   }
 
   @media (max-width: 800px) {
     .planning-grid,
-    .explore-grid {
+    .explore-grid,
+    .decisions-grid {
       grid-template-columns: 1fr;
       gap: 48px;
     }
@@ -343,8 +398,8 @@ const description =
       height: 240px;
     }
 
-    .home-section {
-      padding: 42px 22px;
+    .decisions-section {
+      padding: 55px 22px 60px;
     }
   }
 </style>

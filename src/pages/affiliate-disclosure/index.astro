@@ -1,0 +1,134 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const title = "Affiliate Disclosure | Portugal Considered";
+const description =
+  "Affiliate Disclosure for Portugal Considered, including information about affiliate links and how the site may earn commissions.";
+---
+
+<Base title={title} description={description}>
+  <section class="legal-page">
+    <div class="legal-inner">
+      <p class="eyebrow">Portugal Considered</p>
+
+      <h1>Affiliate Disclosure</h1>
+
+      <p class="updated">Last updated: September 30, 2026</p>
+
+      <p>
+        Portugal Considered is an independent travel publication supported in
+        part through affiliate partnerships. Some links on this website may be
+        affiliate links.
+      </p>
+
+      <h2>How Affiliate Links Work</h2>
+
+      <p>
+        If you click an affiliate link and make a qualifying purchase or
+        booking, Portugal Considered may receive a commission from the company
+        providing the product or service. This does not normally increase the
+        price you pay.
+      </p>
+
+      <h2>Our Editorial Approach</h2>
+
+      <p>
+        Affiliate relationships do not determine the travel guidance,
+        destinations, hotels, transportation options, tours, or other services
+        we choose to discuss.
+      </p>
+
+      <p>
+        Our goal is to begin with the traveler's decision and provide useful
+        guidance first. When a booking opportunity naturally supports that
+        decision, we may provide an affiliate link as a convenient way for the
+        reader to continue planning.
+      </p>
+
+      <h2>Travel Partners</h2>
+
+      <p>
+        Portugal Considered may participate in affiliate programs involving
+        hotels, tours and activities, transportation, rental cars, travel
+        products, and other services relevant to planning a Portugal vacation.
+        Affiliate partners may change over time as the website develops.
+      </p>
+
+      <h2>Our Commitment to Readers</h2>
+
+      <p>
+        We believe recommendations should be useful whether or not a reader
+        chooses to use an affiliate link. Our priority is practical,
+        decision-driven travel guidance that helps travelers plan a better
+        Portugal vacation.
+      </p>
+
+      <h2>Questions</h2>
+
+      <p>
+        Questions about this disclosure may be submitted through our
+        <a href="/contact/">Contact page</a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .legal-page {
+    padding: 85px 28px 90px;
+  }
+
+  .legal-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-green);
+  }
+
+  h1 {
+    margin: 0 0 14px;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 62px);
+    line-height: 1.08;
+    font-weight: 500;
+  }
+
+  .updated {
+    margin: 0 0 42px;
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+
+  .legal-inner h2 {
+    margin: 42px 0 14px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .legal-inner p {
+    font-size: 17px;
+  }
+
+  .legal-inner a {
+    font-weight: 600;
+  }
+
+  @media (max-width: 700px) {
+    .legal-page {
+      padding: 60px 22px 65px;
+    }
+
+    .legal-inner p {
+      font-size: 16px;
+    }
+  }
+</style>

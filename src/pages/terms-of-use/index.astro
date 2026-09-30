@@ -1,0 +1,175 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const title = "Terms of Use | Portugal Considered";
+const description =
+  "Terms of Use for Portugal Considered and the travel information provided on this website.";
+---
+
+<Base title={title} description={description}>
+  <section class="legal-page">
+    <div class="legal-inner">
+      <p class="eyebrow">Portugal Considered</p>
+
+      <h1>Terms of Use</h1>
+
+      <p class="updated">Last updated: September 30, 2026</p>
+
+      <p>
+        By using Portugal Considered, you agree to these Terms of Use. The
+        information on this website is provided to help travelers research,
+        compare, and make their own travel-planning decisions.
+      </p>
+
+      <h2>Travel Information</h2>
+
+      <p>
+        We make reasonable efforts to provide useful and accurate travel
+        information. However, destinations, hotels, transportation schedules,
+        prices, admission policies, operating hours, tours, and other travel
+        details can change.
+      </p>
+
+      <p>
+        Travelers should verify important information directly with the
+        appropriate hotel, transportation provider, attraction, tour operator,
+        government authority, or other service provider before making travel
+        arrangements.
+      </p>
+
+      <h2>Travel Decisions</h2>
+
+      <p>
+        Portugal Considered provides general travel information and planning
+        guidance. Individual circumstances, preferences, budgets, abilities,
+        and travel conditions vary. Readers are responsible for deciding
+        whether particular destinations, activities, transportation options,
+        accommodations, or other travel arrangements are appropriate for
+        them.
+      </p>
+
+      <h2>Third-Party Websites and Services</h2>
+
+      <p>
+        Portugal Considered may link to websites and services operated by
+        third parties. We do not control those websites or their availability,
+        pricing, policies, content, or services.
+      </p>
+
+      <p>
+        Any transaction or booking made with a third party is between the
+        traveler and that provider and is subject to the provider's own terms,
+        conditions, cancellation policies, and privacy practices.
+      </p>
+
+      <h2>Affiliate Relationships</h2>
+
+      <p>
+        Some links on Portugal Considered may be affiliate links. We may earn
+        a commission when a reader makes a qualifying purchase or booking
+        through one of those links.
+      </p>
+
+      <p>
+        Additional information is available in our
+        <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.
+      </p>
+
+      <h2>Copyright and Use of Content</h2>
+
+      <p>
+        Unless otherwise indicated, original written content published on
+        Portugal Considered is protected by applicable copyright laws and may
+        not be reproduced, republished, or distributed without permission.
+      </p>
+
+      <p>
+        Photographs and other materials credited to third parties remain
+        subject to the rights and licenses identified with those materials.
+      </p>
+
+      <h2>No Guarantee of Availability</h2>
+
+      <p>
+        We cannot guarantee that any hotel, tour, transportation option,
+        attraction, product, price, or other service mentioned on this website
+        will remain available or unchanged.
+      </p>
+
+      <h2>Changes to These Terms</h2>
+
+      <p>
+        These Terms of Use may be updated as Portugal Considered develops,
+        including as new features, partnerships, or services are added.
+        Changes will be reflected on this page with an updated revision date.
+      </p>
+
+      <h2>Questions</h2>
+
+      <p>
+        Questions concerning these Terms of Use may be submitted through our
+        <a href="/contact/">Contact page</a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .legal-page {
+    padding: 85px 28px 90px;
+  }
+
+  .legal-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-green);
+  }
+
+  h1 {
+    margin: 0 0 14px;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 62px);
+    line-height: 1.08;
+    font-weight: 500;
+  }
+
+  .updated {
+    margin: 0 0 42px;
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+
+  .legal-inner h2 {
+    margin: 42px 0 14px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .legal-inner p {
+    font-size: 17px;
+  }
+
+  .legal-inner a {
+    font-weight: 600;
+  }
+
+  @media (max-width: 700px) {
+    .legal-page {
+      padding: 60px 22px 65px;
+    }
+
+    .legal-inner p {
+      font-size: 16px;
+    }
+  }
+</style>

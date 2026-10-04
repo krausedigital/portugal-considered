@@ -44,12 +44,9 @@ const description =
         </p>
 
         <p>
-          Our planning guides help you decide how much time individual
-          destinations deserve before you start filling the itinerary.
-        </p>
-
-        <p class="status-note">
-          Start with Porto &amp; the Douro Valley, our first planning region.
+          Our planning guides help you decide how much time Portugal and its
+          individual destinations deserve before you start filling the
+          itinerary.
         </p>
       </div>
     </article>
@@ -108,6 +105,117 @@ const description =
         </p>
       </div>
     </article>
+  </section>
+
+  <section class="guide-directory">
+    <div class="guide-directory-inner">
+      <div class="guide-directory-intro">
+        <p class="eyebrow">Portugal trip planning guides</p>
+
+        <h2>Make the important decisions first.</h2>
+
+        <p>
+          Start with the question that is shaping your trip. These guides are
+          designed to help you decide how much time a place deserves, where to
+          stay, when to move, and which experiences are worth building into
+          your vacation.
+        </p>
+      </div>
+
+      <div class="guide-groups">
+        <section class="guide-group">
+          <p class="section-label">Start with your time</p>
+
+          <h3>How long should you stay?</h3>
+
+          <div class="guide-links">
+            <a href="/trip-planning/how-many-days-portugal/">
+              How Many Days Do You Need in Portugal?
+            </a>
+
+            <a href="/trip-planning/how-many-days-porto-douro/">
+              How Many Days in Porto &amp; the Douro Valley?
+            </a>
+
+            <a href="/trip-planning/how-many-days-lisbon-sintra/">
+              How Many Days in Lisbon &amp; Sintra?
+            </a>
+
+            <a href="/trip-planning/how-many-days-algarve/">
+              How Many Days in the Algarve?
+            </a>
+
+            <a href="/trip-planning/how-many-days-madeira/">
+              How Many Days in Madeira?
+            </a>
+          </div>
+        </section>
+
+        <section class="guide-group">
+          <p class="section-label">Choose your base and transportation</p>
+
+          <h3>Where should you stay—and how should you move?</h3>
+
+          <div class="guide-links">
+            <a href="/trip-planning/where-to-stay-lisbon/">
+              Where to Stay in Lisbon
+            </a>
+
+            <a href="/trip-planning/where-to-stay-douro-valley/">
+              Where to Stay in the Douro Valley
+            </a>
+
+            <a href="/trip-planning/douro-valley-without-car/">
+              Douro Valley Without a Car
+            </a>
+          </div>
+        </section>
+
+        <section class="guide-group">
+          <p class="section-label">Make the day-trip decisions</p>
+
+          <h3>When should you stay overnight?</h3>
+
+          <div class="guide-links">
+            <a href="/trip-planning/sintra-day-trip-or-overnight/">
+              Sintra Day Trip or Overnight?
+            </a>
+
+            <a href="/trip-planning/how-to-plan-a-day-in-sintra/">
+              How to Plan a Day in Sintra
+            </a>
+
+            <a href="/trip-planning/evora-day-trip-or-overnight/">
+              Évora Day Trip or Overnight?
+            </a>
+          </div>
+        </section>
+
+        <section class="guide-group">
+          <p class="section-label">Decide what deserves your time</p>
+
+          <h3>Choose the experiences that make the trip better.</h3>
+
+          <div class="guide-links">
+            <a href="/trip-planning/what-is-worth-seeing-in-lisbon/">
+              What Is Worth Seeing in Lisbon?
+            </a>
+
+            <a href="/trip-planning/what-is-worth-seeing-in-evora/">
+              What Is Worth Seeing in Évora?
+            </a>
+
+            <a href="/trip-planning/how-to-experience-alentejo-beyond-evora/">
+              How to Experience the Alentejo Beyond Évora
+            </a>
+
+            <a href="/trip-planning/how-to-choose-douro-wine-tour/">
+              How to Choose a Douro Valley Wine Tour
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
   </section>
 
   <section class="decision-section">
@@ -202,7 +310,8 @@ const description =
   }
 
   .planning-content h2,
-  .decision-section h2 {
+  .decision-section h2,
+  .guide-directory-intro h2 {
     margin: 0 0 20px;
     font-family: Georgia, serif;
     font-size: clamp(32px, 4vw, 44px);
@@ -215,9 +324,64 @@ const description =
     font-size: 17px;
   }
 
-  .status-note {
+  .guide-directory {
+    padding: 80px 28px;
+    background: #fff;
+    border-top: 1px solid var(--color-sand);
+  }
+
+  .guide-directory-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .guide-directory-intro {
+    max-width: 780px;
+    margin-bottom: 55px;
+  }
+
+  .guide-directory-intro p:last-child {
+    margin: 0;
+    font-size: 18px;
+    color: var(--color-muted);
+  }
+
+  .guide-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  .guide-group {
+    padding: 32px;
+    border: 1px solid var(--color-sand);
+  }
+
+  .guide-group h3 {
+    margin: 0 0 22px;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .guide-links {
+    display: grid;
+    gap: 12px;
+  }
+
+  .guide-links a {
+    display: block;
+    padding: 13px 0;
+    border-top: 1px solid var(--color-sand);
+    font-size: 16px;
     font-weight: 700;
-    color: var(--color-green);
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .guide-links a:hover {
+    text-decoration: underline;
   }
 
   .decision-section {
@@ -261,6 +425,10 @@ const description =
     .planning-image img {
       height: 320px;
     }
+
+    .guide-groups {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 700px) {
@@ -286,6 +454,26 @@ const description =
 
     .planning-content p {
       font-size: 16px;
+    }
+
+    .guide-directory {
+      padding: 55px 22px;
+    }
+
+    .guide-directory-intro {
+      margin-bottom: 35px;
+    }
+
+    .guide-directory-intro p:last-child {
+      font-size: 17px;
+    }
+
+    .guide-group {
+      padding: 25px 22px;
+    }
+
+    .guide-group h3 {
+      font-size: 23px;
     }
 
     .decision-section {

@@ -3,7 +3,7 @@ import Base from "../../layouts/Base.astro";
 
 const title = "Destinations | Portugal Considered";
 const description =
-  "Explore Portugal by region, from Porto and the Douro Valley to Lisbon, Central Portugal, the Algarve, Alentejo, Madeira, and beyond.";
+  "Explore Portugal by region, from Porto and the Douro Valley to Lisbon and Sintra, Alentejo, the Algarve, Madeira, and beyond.";
 ---
 
 <Base title={title} description={description}>
@@ -48,9 +48,19 @@ const description =
           trip or an overnight stay, and whether you need a car at all.
         </p>
 
-        <p class="status-note">
-          Our first Portugal Considered guides begin here.
-        </p>
+        <div class="guide-links">
+          <a href="/trip-planning/how-many-days-porto-douro/">
+            How Many Days in Porto &amp; the Douro Valley? →
+          </a>
+
+          <a href="/trip-planning/where-to-stay-douro-valley/">
+            Where to Stay in the Douro Valley →
+          </a>
+
+          <a href="/trip-planning/douro-valley-without-car/">
+            Can You Visit the Douro Valley Without a Car? →
+          </a>
+        </div>
       </div>
     </article>
 
@@ -63,21 +73,35 @@ const description =
       </div>
 
       <div class="destination-content">
-        <p class="region-label">Lisbon &amp; surrounding region</p>
+        <p class="region-label">Lisbon &amp; Sintra</p>
 
-        <h2>Lisbon &amp; Central Portugal</h2>
+        <h2>Lisbon &amp; Sintra</h2>
 
         <p>
           Lisbon can anchor an entire Portugal trip, but the choices extend
-          well beyond the city. Sintra, Cascais, the Atlantic coast, and
-          destinations farther into Central Portugal can all compete for
-          limited vacation time.
+          well beyond the city. Sintra adds palaces, gardens, hills, and a very
+          different atmosphere within easy reach of the capital.
         </p>
 
         <p>
-          Good planning means deciding what deserves a day trip, what deserves
-          an overnight stay, and when Lisbon remains the most practical base.
+          Good planning means deciding how much time Lisbon deserves, whether
+          Sintra should be a day trip or an overnight stay, and when staying in
+          Lisbon remains the most practical choice.
         </p>
+
+        <div class="guide-links">
+          <a href="/trip-planning/how-many-days-lisbon-sintra/">
+            How Many Days in Lisbon &amp; Sintra? →
+          </a>
+
+          <a href="/trip-planning/sintra-day-trip-or-overnight/">
+            Sintra Day Trip or Overnight? →
+          </a>
+
+          <a href="/trip-planning/where-to-stay-lisbon/">
+            Where to Stay in Lisbon →
+          </a>
+        </div>
       </div>
     </article>
 
@@ -90,22 +114,38 @@ const description =
       </div>
 
       <div class="destination-content">
-        <p class="region-label">More of Portugal</p>
+        <p class="region-label">Southern Portugal &amp; the Islands</p>
 
-        <h2>Beyond the Two Cities</h2>
+        <h2>Alentejo, the Algarve &amp; Madeira</h2>
 
         <p>
-          Portugal does not end with Porto and Lisbon. The Algarve offers
-          beaches, cliffs, towns, and Atlantic scenery. Alentejo brings a
-          slower landscape of historic towns, countryside, and wine, while
-          Madeira offers an entirely different island experience.
+          Portugal changes again beyond Lisbon and Porto. Alentejo offers
+          historic towns, countryside, wine, and a slower rhythm. The Algarve
+          combines dramatic Atlantic coastline with beaches, towns, resorts,
+          and very different experiences from west to east. Madeira adds an
+          island landscape of mountains, coast, walking, and Funchal.
         </p>
 
         <p>
-          As Portugal Considered grows, this is where we will help travelers
-          decide which of these regions belong in their trip—and which may be
-          better saved for another visit.
+          These regions can become the center of a vacation or add a very
+          different experience to a longer Portugal trip. The important
+          question is whether each one deserves the travel time and nights
+          required to experience it well.
         </p>
+
+        <div class="guide-links">
+          <a href="/trip-planning/how-to-experience-alentejo-beyond-evora/">
+            How to Experience Alentejo Beyond Évora →
+          </a>
+
+          <a href="/trip-planning/how-many-days-algarve/">
+            How Many Days in the Algarve? →
+          </a>
+
+          <a href="/trip-planning/how-many-days-madeira/">
+            How Many Days in Madeira? →
+          </a>
+        </div>
       </div>
     </article>
   </section>
@@ -122,7 +162,14 @@ const description =
         can completely change which parts of Portugal make sense.
       </p>
 
-      <a href="/trip-planning/">Explore trip planning →</a>
+      <p>
+        If you are still deciding how much of the country belongs in one trip,
+        start with our Portugal-wide planning guide.
+      </p>
+
+      <a href="/trip-planning/how-many-days-portugal/">
+        How Many Days Do You Need in Portugal? →
+      </a>
     </div>
   </section>
 </Base>
@@ -214,9 +261,21 @@ const description =
     font-size: 17px;
   }
 
-  .status-note {
+  .guide-links {
+    display: grid;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .guide-links a {
+    font-size: 16px;
     font-weight: 700;
-    color: var(--color-green);
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .guide-links a:hover {
+    text-decoration: underline;
   }
 
   .planning-callout {

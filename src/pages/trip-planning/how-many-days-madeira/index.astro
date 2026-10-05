@@ -7,20 +7,24 @@ const pageDescription =
 ---
 
 <Base title={pageTitle} description={pageDescription}>
-  <article>
-    <p>Portugal Trip Planning</p>
+  <article class="guide">
+    <header class="guide-header">
+      <p class="eyebrow">PORTUGAL TRIP PLANNING</p>
 
-    <h1>How Many Days in Madeira?</h1>
+      <h1>How Many Days in Madeira?</h1>
 
-    <h2>
-      Three days introduces you to Madeira. Five days lets you experience it.
-      Seven days can make Madeira the vacation itself.
-    </h2>
+      <p class="subtitle">
+        Three days introduces you to Madeira. Five days lets you experience it.
+        Seven days can make Madeira the vacation itself.
+      </p>
+    </header>
 
-    <img
-      src="/images/madeira-how-many-days-hero.jpg"
-      alt="Rugged coastline near Ponta do Sol on Madeira"
-    />
+    <figure class="guide-image guide-hero">
+      <img
+        src="/images/madeira-how-many-days-hero.jpg"
+        alt="Rugged coastline near Ponta do Sol on Madeira"
+      />
+    </figure>
 
     <p>
       Madeira creates a different planning question from most destinations in
@@ -97,10 +101,12 @@ const pageDescription =
       can lead into an entirely different landscape.
     </p>
 
-    <img
-      src="/images/madeira-pico-ruivo-mountains.jpg"
-      alt="Mountain ridges and clouds around Pico Ruivo on Madeira"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/madeira-pico-ruivo-mountains.jpg"
+        alt="Mountain ridges and clouds around Pico Ruivo on Madeira"
+      />
+    </figure>
 
     <p>
       More importantly, some of Madeira's best experiences are not improved by
@@ -327,10 +333,12 @@ const pageDescription =
       island during the day.
     </p>
 
-    <img
-      src="/images/madeira-funchal-evening.jpg"
-      alt="Restaurants and evening activity along Avenida Arriaga in Funchal, Madeira"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/madeira-funchal-evening.jpg"
+        alt="Restaurants and evening activity along Avenida Arriaga in Funchal, Madeira"
+      />
+    </figure>
 
     <p>
       This works particularly well for a three- or five-day stay.
@@ -471,21 +479,117 @@ const pageDescription =
       to hurry.
     </p>
 
-    <h2>Photo Credits</h2>
+    <section class="photo-credits">
+      <h2>Photo Credits</h2>
 
-    <p>
-      Rugged coastline near Ponta do Sol — Paul Mannix /
-      Wikimedia Commons / CC BY 2.0.
-    </p>
+      <p>
+        Rugged coastline near Ponta do Sol — Paul Mannix /
+        Wikimedia Commons / CC BY 2.0.
+      </p>
 
-    <p>
-      Pico Ruivo, Madeira — TeKappa /
-      Wikimedia Commons / CC BY-SA 4.0.
-    </p>
+      <p>
+        Pico Ruivo, Madeira — TeKappa /
+        Wikimedia Commons / CC BY-SA 4.0.
+      </p>
 
-    <p>
-      Avenida Arriaga, Funchal — Michael Gaylard /
-      Wikimedia Commons / CC BY 2.0.
-    </p>
+      <p>
+        Avenida Arriaga, Funchal — Michael Gaylard /
+        Wikimedia Commons / CC BY 2.0.
+      </p>
+    </section>
   </article>
+
+  <style>
+    .guide {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .guide-header {
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .guide-header h1 {
+      margin: 0;
+    }
+
+    .subtitle {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .guide h2 {
+      margin-top: 2.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .guide p {
+      line-height: 1.75;
+    }
+
+    .guide-image {
+      margin: 2.25rem 0;
+    }
+
+    .guide-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .guide-hero {
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .photo-credits {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .photo-credits h2 {
+      margin-top: 0;
+    }
+
+    .photo-credits p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .guide {
+        padding: 2rem 1rem 3rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .guide h2 {
+        margin-top: 2.25rem;
+      }
+
+      .guide-image {
+        margin: 1.75rem 0;
+      }
+
+      .guide-hero {
+        margin-top: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </Base>

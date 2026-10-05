@@ -8,20 +8,24 @@ const pageDescription =
 ---
 
 <Base title={pageTitle} description={pageDescription}>
-  <article>
-    <p>Portugal Trip Planning</p>
+  <article class="guide">
+    <header class="guide-header">
+      <p class="eyebrow">PORTUGAL TRIP PLANNING</p>
 
-    <h1>How to Experience the Alentejo Beyond Évora</h1>
+      <h1>How to Experience the Alentejo Beyond Évora</h1>
 
-    <h2>
-      How to Discover the Landscape, Towns and Experiences That Make Inland
-      Portugal Different
-    </h2>
+      <p class="subtitle">
+        How to Discover the Landscape, Towns and Experiences That Make Inland
+        Portugal Different
+      </p>
+    </header>
 
-    <img
-      src="/images/alentejo-beyond-evora-hero.jpg"
-      alt="Cork oaks, vineyards and agricultural landscape in Portugal's Alentejo region"
-    />
+    <figure class="guide-image guide-hero">
+      <img
+        src="/images/alentejo-beyond-evora-hero.jpg"
+        alt="Cork oaks, vineyards and agricultural landscape in Portugal's Alentejo region"
+      />
+    </figure>
 
     <p>
       Évora can introduce you to the Alentejo.
@@ -268,10 +272,12 @@ const pageDescription =
 
     <h2>Why Monsaraz?</h2>
 
-    <img
-      src="/images/alentejo-monsaraz-hill-town.jpg"
-      alt="Whitewashed hill town of Monsaraz overlooking the Alentejo countryside"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/alentejo-monsaraz-hill-town.jpg"
+        alt="Whitewashed hill town of Monsaraz overlooking the Alentejo countryside"
+      />
+    </figure>
 
     <p>
       Monsaraz is a medieval hill town of whitewashed houses and stone, with a
@@ -386,10 +392,12 @@ const pageDescription =
 
     <h2>Archaeology Reveals Another Alentejo</h2>
 
-    <img
-      src="/images/alentejo-almendres-cromlech.jpg"
-      alt="Prehistoric standing stones of the Almendres Cromlech in the Alentejo"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/alentejo-almendres-cromlech.jpg"
+        alt="Prehistoric standing stones of the Almendres Cromlech in the Alentejo"
+      />
+    </figure>
 
     <p>
       The Alentejo's history reaches much farther back than Roman Évora.
@@ -717,20 +725,140 @@ const pageDescription =
       </p>
     </blockquote>
 
-    <h2>Photo Credits</h2>
+    <section class="photo-credits">
+      <h2>Photo Credits</h2>
 
-    <p>
-      Alentejo countryside near Elvas — Photo: Alvesgaspar / Wikimedia Commons /
-      CC BY-SA 3.0
-    </p>
+      <p>
+        Alentejo countryside near Elvas — Photo: Alvesgaspar / Wikimedia Commons /
+        CC BY-SA 3.0
+      </p>
 
-    <p>
-      Monsaraz — Photo: Ken &amp; Nyetta / Wikimedia Commons / CC BY 2.0
-    </p>
+      <p>
+        Monsaraz — Photo: Ken &amp; Nyetta / Wikimedia Commons / CC BY 2.0
+      </p>
 
-    <p>
-      Almendres Cromlech — Photo: Felicity and Phillip / Wikimedia Commons /
-      CC BY 2.0
-    </p>
+      <p>
+        Almendres Cromlech — Photo: Felicity and Phillip / Wikimedia Commons /
+        CC BY 2.0
+      </p>
+    </section>
   </article>
+
+  <style>
+    .guide {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .guide-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .guide-header h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.02;
+    }
+
+    .subtitle {
+      margin: 1rem 0 0;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .guide h2 {
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    .guide h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .guide p {
+      line-height: 1.75;
+    }
+
+    .guide blockquote {
+      margin: 2rem 0;
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid currentColor;
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+
+    .guide blockquote p {
+      margin: 0;
+    }
+
+    .guide-image {
+      margin: 3rem 0 4rem;
+    }
+
+    .guide-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .guide-hero {
+      margin-top: 0;
+    }
+
+    .photo-credits {
+      margin-top: 4.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d8ddd9;
+    }
+
+    .photo-credits h2 {
+      margin-top: 0;
+    }
+
+    .photo-credits p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .guide {
+        padding: 2rem 1.1rem 4rem;
+      }
+
+      .guide-header h1 {
+        font-size: clamp(2.2rem, 11vw, 3.3rem);
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .guide h2 {
+        margin-top: 3rem;
+      }
+
+      .guide-image {
+        margin: 2rem 0 3rem;
+      }
+
+      .guide-hero {
+        margin-top: 0;
+      }
+    }
+  </style>
 </Base>

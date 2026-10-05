@@ -7,19 +7,23 @@ const pageDescription =
 ---
 
 <Base title={pageTitle} description={pageDescription}>
-  <article>
-    <p>Portugal Trip Planning</p>
+  <article class="guide">
+    <header class="guide-header">
+      <p class="eyebrow">PORTUGAL TRIP PLANNING</p>
 
-    <h1>How to Plan a Day in Sintra</h1>
+      <h1>How to Plan a Day in Sintra</h1>
 
-    <h2>
-      How to Decide What to See Without Turning Sintra Into a Race
-    </h2>
+      <p class="subtitle">
+        How to Decide What to See Without Turning Sintra Into a Race
+      </p>
+    </header>
 
-    <img
-      src="/images/sintra-day-planning-hero.jpg"
-      alt="Historic center of Sintra surrounded by the green hills of Portugal"
-    />
+    <figure class="guide-image guide-hero">
+      <img
+        src="/images/sintra-day-planning-hero.jpg"
+        alt="Historic center of Sintra surrounded by the green hills of Portugal"
+      />
+    </figure>
 
     <p>
       Sintra creates a particular kind of travel-planning problem.
@@ -380,10 +384,12 @@ const pageDescription =
       Spend meaningful time at Quinta da Regaleira.
     </p>
 
-    <img
-      src="/images/sintra-regaleira-gardens.jpg"
-      alt="Gardens and ornate architecture at Quinta da Regaleira in Sintra"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/sintra-regaleira-gardens.jpg"
+        alt="Gardens and ornate architecture at Quinta da Regaleira in Sintra"
+      />
+    </figure>
 
     <p>
       Give yourself room to experience the historic center rather than simply
@@ -444,10 +450,12 @@ const pageDescription =
       experience.
     </p>
 
-    <img
-      src="/images/sintra-moorish-castle-landscape.jpg"
-      alt="Moorish Castle fortifications following a mountain ridge above Sintra"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/sintra-moorish-castle-landscape.jpg"
+        alt="Moorish Castle fortifications following a mountain ridge above Sintra"
+      />
+    </figure>
 
     <p>
       That makes it particularly interesting for travelers drawn to history,
@@ -864,21 +872,141 @@ const pageDescription =
       Build the day around that answer.
     </p>
 
-    <h2>Photo Credits</h2>
+    <section class="photo-credits">
+      <h2>Photo Credits</h2>
 
-    <p>
-      Historic center of Sintra — Peter K Burian —
-      Creative Commons Attribution 4.0 International (CC BY 4.0).
-    </p>
+      <p>
+        Historic center of Sintra — Peter K Burian —
+        Creative Commons Attribution 4.0 International (CC BY 4.0).
+      </p>
 
-    <p>
-      Moorish Castle, Sintra — Diego Delso —
-      Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
-    </p>
+      <p>
+        Moorish Castle, Sintra — Diego Delso —
+        Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+      </p>
 
-    <p>
-      Quinta da Regaleira gardens — Maria Eklind —
-      Creative Commons Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0).
-    </p>
+      <p>
+        Quinta da Regaleira gardens — Maria Eklind —
+        Creative Commons Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0).
+      </p>
+    </section>
   </article>
+
+  <style>
+    .guide {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .guide-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .guide-header h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.02;
+    }
+
+    .subtitle {
+      margin: 1rem 0 0;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .guide h2 {
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    .guide h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .guide p {
+      line-height: 1.75;
+    }
+
+    .guide blockquote {
+      margin: 2rem 0;
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid currentColor;
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+
+    .guide blockquote p {
+      margin: 0;
+    }
+
+    .guide-image {
+      margin: 3rem 0 4rem;
+    }
+
+    .guide-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .guide-hero {
+      margin-top: 0;
+    }
+
+    .photo-credits {
+      margin-top: 4.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d8ddd9;
+    }
+
+    .photo-credits h2 {
+      margin-top: 0;
+    }
+
+    .photo-credits p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .guide {
+        padding: 2rem 1.1rem 4rem;
+      }
+
+      .guide-header h1 {
+        font-size: clamp(2.2rem, 11vw, 3.3rem);
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .guide h2 {
+        margin-top: 3rem;
+      }
+
+      .guide-image {
+        margin: 2rem 0 3rem;
+      }
+
+      .guide-hero {
+        margin-top: 0;
+      }
+    }
+  </style>
 </Base>

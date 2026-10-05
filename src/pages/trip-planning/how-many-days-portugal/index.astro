@@ -7,20 +7,24 @@ const pageDescription =
 ---
 
 <Base title={pageTitle} description={pageDescription}>
-  <article>
-    <p>Portugal Trip Planning</p>
+  <article class="guide">
+    <header class="guide-header">
+      <p class="eyebrow">PORTUGAL TRIP PLANNING</p>
 
-    <h1>How Many Days Do You Need in Portugal?</h1>
+      <h1>How Many Days Do You Need in Portugal?</h1>
 
-    <h2>
-      Seven days can make a very good Portugal trip. Ten days gives you choices.
-      Two weeks gives the country room to open up.
-    </h2>
+      <p class="subtitle">
+        Seven days can make a very good Portugal trip. Ten days gives you choices.
+        Two weeks gives the country room to open up.
+      </p>
+    </header>
 
-    <img
-      src="/images/portugal-how-many-days-hero.jpg"
-      alt="View across the historic town of Óbidos and surrounding Portuguese countryside"
-    />
+    <figure class="guide-image guide-hero">
+      <img
+        src="/images/portugal-how-many-days-hero.jpg"
+        alt="View across the historic town of Óbidos and surrounding Portuguese countryside"
+      />
+    </figure>
 
     <p>Portugal looks manageable on a map.</p>
 
@@ -266,10 +270,12 @@ const pageDescription =
       genuinely add something different to the trip.
     </p>
 
-    <img
-      src="/images/portugal-lisbon-chiado-cafe.jpg"
-      alt="People enjoying an outdoor café in Largo do Chiado in Lisbon"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/portugal-lisbon-chiado-cafe.jpg"
+        alt="People enjoying an outdoor café in Largo do Chiado in Lisbon"
+      />
+    </figure>
 
     <h2>14 Days in Portugal — Choose Range Without Rushing</h2>
 
@@ -476,10 +482,12 @@ const pageDescription =
 
     <p>Those are different vacations.</p>
 
-    <img
-      src="/images/portugal-algarve-beach.jpg"
-      alt="Vacationers enjoying Praia de São Rafael on Portugal's Algarve coast"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/portugal-algarve-beach.jpg"
+        alt="Vacationers enjoying Praia de São Rafael on Portugal's Algarve coast"
+      />
+    </figure>
 
     <h2>What About Madeira?</h2>
 
@@ -728,63 +736,158 @@ const pageDescription =
       >
     </p>
 
-    <h2>Photo Credits</h2>
+    <section class="photo-credits">
+      <h2>Photo Credits</h2>
 
-    <p>
-      Óbidos, Portugal — photograph by Diego Delso,
-      <a
-        href="https://commons.wikimedia.org/wiki/File:%C3%93bidos,_Portugal,_2021-09-09,_DD_01-10_PAN.jpg"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Wikimedia Commons
-      </a>,
-      licensed under
-      <a
-        href="https://creativecommons.org/licenses/by-sa/4.0/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        CC BY-SA 4.0
-      </a>.
-    </p>
+      <p>
+        Óbidos, Portugal — photograph by Diego Delso,
+        <a
+          href="https://commons.wikimedia.org/wiki/File:%C3%93bidos,_Portugal,_2021-09-09,_DD_01-10_PAN.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Wikimedia Commons
+        </a>,
+        licensed under
+        <a
+          href="https://creativecommons.org/licenses/by-sa/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CC BY-SA 4.0
+        </a>.
+      </p>
 
-    <p>
-      Largo do Chiado, Lisbon — photograph by Bahnfrend,
-      <a
-        href="https://commons.wikimedia.org/wiki/File:Largo_do_Chiado_(Lisbon),_2008_(01).jpg"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Wikimedia Commons
-      </a>,
-      licensed under
-      <a
-        href="https://creativecommons.org/licenses/by-sa/4.0/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        CC BY-SA 4.0
-      </a>.
-    </p>
+      <p>
+        Largo do Chiado, Lisbon — photograph by Bahnfrend,
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Largo_do_Chiado_(Lisbon),_2008_(01).jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Wikimedia Commons
+        </a>,
+        licensed under
+        <a
+          href="https://creativecommons.org/licenses/by-sa/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CC BY-SA 4.0
+        </a>.
+      </p>
 
-    <p>
-      Praia de São Rafael, Albufeira — photograph by Dan Gold,
-      <a
-        href="https://commons.wikimedia.org/wiki/File:Vacationers_on_a_sunny_beach_(Unsplash).jpg"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Wikimedia Commons
-      </a>,
-      made available under the
-      <a
-        href="https://creativecommons.org/publicdomain/zero/1.0/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        CC0 1.0 Universal Public Domain Dedication
-      </a>.
-    </p>
+      <p>
+        Praia de São Rafael, Albufeira — photograph by Dan Gold,
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Vacationers_on_a_sunny_beach_(Unsplash).jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Wikimedia Commons
+        </a>,
+        made available under the
+        <a
+          href="https://creativecommons.org/publicdomain/zero/1.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CC0 1.0 Universal Public Domain Dedication
+        </a>.
+      </p>
+    </section>
   </article>
+
+  <style>
+    .guide {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .guide-header {
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      margin-bottom: 0.75rem;
+      color: #66706a;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    h1 {
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #4f5953;
+    }
+
+    h2 {
+      margin-top: 4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    p,
+    li {
+      line-height: 1.75;
+    }
+
+    blockquote {
+      margin: 2rem 0;
+      padding: 1.25rem 1.5rem;
+      border-left: 3px solid #68776e;
+      background: #f4f6f4;
+    }
+
+    blockquote p {
+      margin: 0;
+    }
+
+    .guide-image {
+      margin: 3rem 0 4rem;
+    }
+
+    .guide-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .guide-hero {
+      margin-top: 2rem;
+    }
+
+    .photo-credits {
+      margin-top: 4.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d8ddd9;
+    }
+
+    .photo-credits h2 {
+      margin-top: 0;
+    }
+
+    .photo-credits p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .guide {
+        padding: 2rem 1.1rem 4rem;
+      }
+
+      h2 {
+        margin-top: 3rem;
+      }
+    }
+  </style>
 </Base>

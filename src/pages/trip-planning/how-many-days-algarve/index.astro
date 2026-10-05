@@ -7,17 +7,23 @@ const pageDescription =
 ---
 
 <Base title={pageTitle} description={pageDescription}>
-  <article>
-    <p>Portugal Trip Planning</p>
+  <article class="guide">
+    <header class="guide-header">
+      <p class="eyebrow">PORTUGAL TRIP PLANNING</p>
 
-    <h1>How Many Days in the Algarve?</h1>
+      <h1>How Many Days in the Algarve?</h1>
 
-    <h2>How to Decide How Much Time Portugal's Southern Coast Deserves</h2>
+      <p class="subtitle">
+        How to Decide How Much Time Portugal's Southern Coast Deserves
+      </p>
+    </header>
 
-    <img
-      src="/images/algarve-how-many-days-hero.jpg"
-      alt="Golden cliffs and turquoise water along the Algarve coast in southern Portugal"
-    />
+    <figure class="guide-image guide-hero">
+      <img
+        src="/images/algarve-how-many-days-hero.jpg"
+        alt="Golden cliffs and turquoise water along the Algarve coast in southern Portugal"
+      />
+    </figure>
 
     <p>
       The Algarve can create a difficult decision when you're planning a
@@ -145,10 +151,12 @@ const pageDescription =
 
     <p>The eastern Algarve changes again.</p>
 
-    <img
-      src="/images/algarve-tavira-island-beach.jpg"
-      alt="Sandy beach and coastal landscape on Tavira Island in the eastern Algarve"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/algarve-tavira-island-beach.jpg"
+        alt="Sandy beach and coastal landscape on Tavira Island in the eastern Algarve"
+      />
+    </figure>
 
     <p>
       Around Faro, Tavira and the Ria Formosa, barrier islands, lagoons,
@@ -322,10 +330,12 @@ const pageDescription =
 
     <p>Spend an evening in town.</p>
 
-    <img
-      src="/images/algarve-lagos-evening.jpg"
-      alt="Praça Infante Dom Henrique illuminated at night in Lagos, Algarve"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/algarve-lagos-evening.jpg"
+        alt="Praça Infante Dom Henrique illuminated at night in Lagos, Algarve"
+      />
+    </figure>
 
     <p>Make an excursion.</p>
 
@@ -628,21 +638,136 @@ const pageDescription =
       decide.
     </p>
 
-    <h2>Photo Credits</h2>
+    <section class="photo-credits">
+      <h2>Photo Credits</h2>
 
-    <p>
-      Algarve coast at Ponta da Piedade — Dronepicr /
-      Wikimedia Commons / CC BY 3.0.
-    </p>
+      <p>
+        Algarve coast at Ponta da Piedade — Dronepicr /
+        Wikimedia Commons / CC BY 3.0.
+      </p>
 
-    <p>
-      Tavira Island beach — Espen Nordenhaug /
-      Wikimedia Commons / CC BY-SA 2.0.
-    </p>
+      <p>
+        Tavira Island beach — Espen Nordenhaug /
+        Wikimedia Commons / CC BY-SA 2.0.
+      </p>
 
-    <p>
-      Praça Infante Dom Henrique at night, Lagos — Tibor Kovacs /
-      Wikimedia Commons / CC BY 2.0.
-    </p>
+      <p>
+        Praça Infante Dom Henrique at night, Lagos — Tibor Kovacs /
+        Wikimedia Commons / CC BY 2.0.
+      </p>
+    </section>
   </article>
+
+  <style>
+    .guide {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .guide-header {
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .guide-header h1 {
+      margin: 0;
+    }
+
+    .subtitle {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .guide h2 {
+      margin-top: 2.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .guide h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .guide p {
+      line-height: 1.75;
+    }
+
+    .guide blockquote {
+      margin: 2rem 0;
+      padding-left: 1.25rem;
+      border-left: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .guide blockquote p {
+      margin: 0;
+    }
+
+    .guide-image {
+      margin: 2.25rem 0;
+    }
+
+    .guide-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .guide-hero {
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .photo-credits {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .photo-credits h2 {
+      margin-top: 0;
+    }
+
+    .photo-credits p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .guide {
+        padding: 2rem 1rem 3rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .guide h2 {
+        margin-top: 2.25rem;
+      }
+
+      .guide h3 {
+        margin-top: 1.75rem;
+      }
+
+      .guide-image {
+        margin: 1.75rem 0;
+      }
+
+      .guide-hero {
+        margin-top: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </Base>

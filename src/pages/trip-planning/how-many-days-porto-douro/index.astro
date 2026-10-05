@@ -63,7 +63,8 @@ const pageDescription =
         full day simply because it appears on the calendar.
       </aside>
     </header>
-    <figure class="guide-image">
+
+    <figure class="guide-image guide-hero">
       <img
         src="/images/porto-douro-riverfront-travelers.jpg"
         alt="Travelers overlooking the Douro River and Porto riverfront"
@@ -72,6 +73,7 @@ const pageDescription =
         Porto and the Douro belong to the same journey, but they offer very different ways to spend your time.
       </figcaption>
     </figure>
+
     <section>
       <h2>At a Glance: How Much Time Should You Allow?</h2>
 
@@ -365,6 +367,7 @@ const pageDescription =
 
       <p>And answering the second one usually produces a better itinerary.</p>
     </section>
+
     <figure class="guide-image">
       <img
         src="/images/douro-valley-vineyards.jpg"
@@ -374,6 +377,7 @@ const pageDescription =
         The Douro becomes a different experience when the landscape itself is part of the reason for staying.
       </figcaption>
     </figure>
+
     <section>
       <h2>Douro Valley Day Trip or Overnight?</h2>
 
@@ -544,7 +548,10 @@ const pageDescription =
         visit without driving.
       </p>
 
-      <p>A car offers <strong>flexibility</strong>, but flexibility isn't the same as necessity.</p>
+      <p>
+        A car offers <strong>flexibility</strong>, but flexibility isn't the same
+        as necessity.
+      </p>
 
       <p>
         And if wine tasting is one of the main reasons you're visiting, think
@@ -764,7 +771,8 @@ const pageDescription =
 
   <style>
     .guide {
-      width: min(100% - 2rem, 820px);
+      width: min(100% - 2rem, 780px);
+      max-width: 780px;
       margin: 0 auto;
       padding: 4.5rem 0 6rem;
       color: #24332e;
@@ -814,7 +822,7 @@ const pageDescription =
       line-height: 1.65;
     }
 
-      .guide p {
+    .guide p {
       line-height: 1.8;
     }
 
@@ -837,12 +845,10 @@ const pageDescription =
       font-style: italic;
     }
 
-      margin-top: 0.75rem;
-      color: #66706a;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      font-style: italic;
+    .guide-hero {
+      margin-top: 0;
     }
+
     section {
       margin-top: 4.5rem;
     }
@@ -996,7 +1002,7 @@ const pageDescription =
 
     @media (max-width: 720px) {
       .guide {
-        width: min(100% - 1.5rem, 820px);
+        width: min(100% - 1.5rem, 780px);
         padding-top: 3rem;
       }
 

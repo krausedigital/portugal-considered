@@ -7,17 +7,23 @@ const pageDescription =
 ---
 
 <Base title={pageTitle} description={pageDescription}>
-  <article>
-    <p>Portugal Trip Planning</p>
+  <article class="guide">
+    <header class="guide-header">
+      <p class="eyebrow">PORTUGAL TRIP PLANNING</p>
 
-    <h1>Évora Day Trip or Overnight?</h1>
+      <h1>Évora Day Trip or Overnight?</h1>
 
-    <h2>How to Decide How Much Time Évora Deserves on Your Portugal Trip</h2>
+      <p class="subtitle">
+        How to Decide How Much Time Évora Deserves on Your Portugal Trip
+      </p>
+    </header>
 
-    <img
-      src="/images/evora-day-trip-overnight-hero.jpg"
-      alt="Historic center of Évora with whitewashed buildings and the Alentejo countryside beyond"
-    />
+    <figure class="guide-image guide-hero">
+      <img
+        src="/images/evora-day-trip-overnight-hero.jpg"
+        alt="Historic center of Évora with whitewashed buildings and the Alentejo countryside beyond"
+      />
+    </figure>
 
     <p>
       Évora creates an interesting decision for travelers planning Portugal.
@@ -205,11 +211,13 @@ const pageDescription =
       And when the sightseeing portion of the day ends, you are still in Évora.
     </p>
 
-    <img
-      src="/images/evora-giraldo-square-evening.jpg"
-      alt="Praça do Giraldo illuminated in the evening in Évora"
-      loading="lazy"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/evora-giraldo-square-evening.jpg"
+        alt="Praça do Giraldo illuminated in the evening in Évora"
+        loading="lazy"
+      />
+    </figure>
 
     <p>
       Évora isn't only a collection of historic monuments. Its restaurants,
@@ -284,11 +292,13 @@ const pageDescription =
       Alentejo.</strong>
     </p>
 
-    <img
-      src="/images/evora-alentejo-countryside.jpg"
-      alt="Open Alentejo countryside with a cork oak and rolling agricultural landscape"
-      loading="lazy"
-    />
+    <figure class="guide-image">
+      <img
+        src="/images/evora-alentejo-countryside.jpg"
+        alt="Open Alentejo countryside with a cork oak and rolling agricultural landscape"
+        loading="lazy"
+      />
+    </figure>
 
     <p>
       Outside the historic center, the surrounding landscape changes. Cork and
@@ -622,21 +632,151 @@ const pageDescription =
       </p>
     </blockquote>
 
-    <h2>Photo Credits</h2>
+    <section class="photo-credits">
+      <h2>Photo Credits</h2>
 
-    <p>
-      Évora historic center: Ingo Mehling / Wikimedia Commons /
-      CC BY-SA 4.0.
-    </p>
+      <p>
+        Évora historic center: Ingo Mehling / Wikimedia Commons /
+        CC BY-SA 4.0.
+      </p>
 
-    <p>
-      Praça do Giraldo at night: Miguel Ereira Marques / Wikimedia Commons /
-      CC BY-SA 3.0.
-    </p>
+      <p>
+        Praça do Giraldo at night: Miguel Ereira Marques / Wikimedia Commons /
+        CC BY-SA 3.0.
+      </p>
 
-    <p>
-      Alentejo countryside: Alvesgaspar / Wikimedia Commons /
-      CC BY-SA 4.0.
-    </p>
+      <p>
+        Alentejo countryside: Alvesgaspar / Wikimedia Commons /
+        CC BY-SA 4.0.
+      </p>
+    </section>
   </article>
+
+  <style>
+    .guide {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .guide-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .guide-header h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.02;
+    }
+
+    .subtitle {
+      margin: 1rem 0 0;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .guide h2 {
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    .guide h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .guide p {
+      line-height: 1.75;
+    }
+
+    .guide ul {
+      margin: 1rem 0 1.75rem;
+      padding-left: 1.5rem;
+    }
+
+    .guide li {
+      margin-bottom: 0.6rem;
+      line-height: 1.65;
+    }
+
+    .guide blockquote {
+      margin: 2rem 0;
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid currentColor;
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+
+    .guide blockquote p {
+      margin: 0;
+    }
+
+    .guide-image {
+      margin: 3rem 0 4rem;
+    }
+
+    .guide-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .guide-hero {
+      margin-top: 0;
+    }
+
+    .photo-credits {
+      margin-top: 4.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d8ddd9;
+    }
+
+    .photo-credits h2 {
+      margin-top: 0;
+    }
+
+    .photo-credits p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .guide {
+        padding: 2rem 1.1rem 4rem;
+      }
+
+      .guide-header h1 {
+        font-size: clamp(2.2rem, 11vw, 3.3rem);
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .guide h2 {
+        margin-top: 3rem;
+      }
+
+      .guide-image {
+        margin: 2rem 0 3rem;
+      }
+
+      .guide-hero {
+        margin-top: 0;
+      }
+    }
+  </style>
 </Base>
